@@ -18,7 +18,7 @@ import replace from "replace-in-file";
 import type { ReplaceInFileConfig, replaceInFile } from "replace-in-file";
 import { isEqual, template } from "lodash-es";
 
-import { Context } from "semantic-release";
+import { VerifyReleaseContext as Context } from "semantic-release";
 import { diff } from "jest-diff";
 
 // Redefine `replace-in-file` config's `From` and `To` types for their callback

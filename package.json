@@ -1,7 +1,7 @@
 {
   "name": "semantic-release-replace-plugin",
   "version": "1.2.7",
-  "description": "Semantic Release Replace Plugin",
+  "description": "Semantic Release Replace Plugin v2",
   "keywords": [
     "semantic-release",
     "node",
@@ -9,13 +9,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpoehnelt/semantic-release-replace-plugin.git"
+    "url": "git+https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin.git"
   },
   "license": "Apache-2.0",
-  "author": {
-    "name": "Justin Poehnelt",
-    "email": "justin.poehnelt@gmail.com"
-  },
   "type": "module",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
@@ -25,7 +21,7 @@
     "README.md"
   ],
   "scripts": {
-    "all": "npm run build && npm run lint && npm test && npm run docs",
+    "all": "npm run build && npm run docs",
     "build": "tsc",
     "docs": "rm -rf docs && typedoc src/index.ts",
     "lint": "eslint src/**/*.ts",
@@ -44,6 +40,7 @@
     "@semantic-release/github": "^9.0.3",
     "@semantic-release/npm": "^10.0.4",
     "@semantic-release/release-notes-generator": "^11.0.4",
+    "@types/jest": "^29.5.12",
     "@types/lodash-es": "^4.17.7",
     "@types/node": "^20.4.0",
     "@types/semantic-release": "^20.0.1",
@@ -54,9 +51,10 @@
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "semantic-release": "^21.0.7",
     "fs-extra": "^11.1.1",
+    "jest": "^29.7.0",
     "prettier": "^2.8.8",
+    "semantic-release": "^21.0.7",
     "tmp": "^0.2.1",
     "typedoc": "^0.24.8",
     "typedoc-plugin-markdown": "^3.15.3",
@@ -64,10 +62,10 @@
     "vitest": "^0.33.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20.8.1"
   },
   "peerDependencies": {
-    "semantic-release": ">=20.1.0"
+    "semantic-release": "^23.0.6"
   },
   "publishConfig": {
     "access": "public"

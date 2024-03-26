@@ -19,33 +19,94 @@ import type { ToCallback, FromCallback } from "./index.js";
 import fs from "fs-extra";
 import path from "path";
 import tmp, { DirResult } from "tmp";
-import { Context } from "semantic-release";
-import { test, vi, expect, beforeEach, afterEach } from "vitest";
+import { VerifyReleaseContext as Context } from "semantic-release";
+import { test, expect, beforeEach, afterEach } from "vitest";
 
 import { prepare } from "./index.js";
 
 const context: Context = {
+  stdout: process.stdout,
+  stderr: process.stderr,
+  logger: {}, // You might need to provide appropriate options to Signale constructor
+
+  cwd: "/path/to/your/repository",
+  env: process.env,
+  envCi: {
+    isCi: true,
+    commit: "abcdef123456",
+    branch: "main",
+  },
   branch: {
-    name: "foo",
+    name: "main",
+    channel: false,
+    range: undefined,
   },
+  branches: [
+    {
+      name: "main",
+      channel: false,
+      range: undefined,
+    },
+  ],
+
+  commits: [
+    {
+      commit: {
+        long: "abcdef1234567890",
+        short: "abcdef12",
+      },
+      tree: {
+        long: "1234567890abcdef",
+        short: "12345678",
+      },
+      author: {
+        name: "John Doe",
+        email: "john.doe@example.com",
+        short: "2024-03-26",
+      },
+      committer: {
+        name: "Jane Doe",
+        email: "jane.doe@example.com",
+        short: "2024-03-26",
+      },
+      subject: "Example commit",
+      body: "This is an example commit.",
+      message: "Example commit: This is an example commit.",
+      hash: "abcdef1234567890",
+      committerDate: "2024-03-26",
+    },
+  ],
+
+  releases: [
+    {
+      name: "patch",
+      url: "https://example.com/release",
+      type: "patch",
+      version: "1.0.0",
+      gitHead: "abcdef123456",
+      gitTag: "v1.0.0",
+      notes: "These are the release notes for the dummy release.",
+      pluginName: "Dummy Release Plugin",
+    },
+  ],
+
   lastRelease: {
-    gitHead: "foo",
-    gitTag: "v1.0.0",
     version: "1.0.0",
+    gitTag: "v1.0.0",
+    channels: [],
+    gitHead: "abcdef123456",
+    name: "patch",
   },
+
   nextRelease: {
-    type: "major" as const,
-    gitTag: "2.0.0",
+    name: "abc",
+    type: "patch",
     version: "2.0.0",
-    notes: "",
-    gitHead: "foo",
+    gitHead: "abcdef123456",
+    gitTag: "v2.0.0",
+    channel: "main",
+    notes: "These are the release notes for the next release.",
   },
-  logger: {
-    log: vi.fn(),
-    error: console.error,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } as any,
-  env: {},
 };
 
 let d: DirResult;
@@ -71,8 +132,11 @@ async function assertFileContentsContain(
   name: string,
   expected: string
 ): Promise<void> {
-  const actual = await fs.readFileSync(path.join(d.name, name), "utf-8");
-  expect(actual).toEqual(expect.stringContaining(expected));
+  const filePath = path.join(d.name, name);
+  const actual = await fs.readFileSync(filePath, "utf-8");
+  if (!actual.includes(expected)) {
+    throw new Error(`File ${filePath} does not contain "${expected}"`);
+  }
 }
 
 test("should expose prepare", async () => {
