@@ -1,4 +1,4 @@
-# Semantic Release Replace Plugin
+# Automated Semantic Release Plugin for Version Number Replacement and Date Management
 
 [![npm](https://img.shields.io/npm/v/semantic-release-replace-plugin)](https://www.npmjs.com/package/semantic-release-replace-plugin)
 ![Build](https://github.com/jpoehnelt/semantic-release-replace-plugin/workflows/Build/badge.svg)
@@ -14,7 +14,7 @@ Read more about [Semantic Release](https://semantic-release.gitbook.io/).
 ## Install
 
 ```bash
-$ npm install semantic-release-replace-plugin -D
+$ npm install https://github.com/centralnicgroup-opensource/semantic-release-replace-plugin -D
 ```
 
 ## Usage
@@ -30,9 +30,10 @@ The following example uses this plugin to demonstrate using semantic-release in 
       {
         "replacements": [
           {
-            "files": ["foo/__init__.py"],
+            "files": ["foo/**.py"],
             "from": "__VERSION__ = \".*\"",
             "to": "__VERSION__ = \"${nextRelease.version}\"",
+            "ignore" ["foo/go.py"],
             "results": [
               {
                 "file": "foo/__init__.py",
