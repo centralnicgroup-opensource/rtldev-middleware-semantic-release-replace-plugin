@@ -28,7 +28,7 @@ semantic-release-replace-plugin
 
 #### Defined in
 
-[index.ts:26](https://github.com/jpoehnelt/semantic-release-replace-plugin/blob/c94a018/src/index.ts#L26)
+[index.ts:26](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/ff284ec/src/index.ts#L26)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[index.ts:27](https://github.com/jpoehnelt/semantic-release-replace-plugin/blob/c94a018/src/index.ts#L27)
+[index.ts:27](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/ff284ec/src/index.ts#L27)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[index.ts:31](https://github.com/jpoehnelt/semantic-release-replace-plugin/blob/c94a018/src/index.ts#L31)
+[index.ts:31](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/ff284ec/src/index.ts#L31)
 
 ___
 
@@ -88,25 +88,25 @@ ___
 
 #### Defined in
 
-[index.ts:32](https://github.com/jpoehnelt/semantic-release-replace-plugin/blob/c94a018/src/index.ts#L32)
+[index.ts:32](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/ff284ec/src/index.ts#L32)
 
 ## Functions
 
 ### prepare
 
-▸ **prepare**(`PluginConfig`, `context`): `Promise`<`void`\>
+▸ **prepare**(`PluginConfig`, `context`): `Promise`\<`void`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `PluginConfig` | [`PluginConfig`](interfaces/PluginConfig.md) |
-| `context` | `Context` |
+| `context` | `VerifyReleaseContext` |
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Defined in
 
-[index.ts:163](https://github.com/jpoehnelt/semantic-release-replace-plugin/blob/c94a018/src/index.ts#L163)
+[index.ts:163](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/ff284ec/src/index.ts#L163)

@@ -17,13 +17,12 @@ import * as m from "./index.js";
 import fs from "fs-extra";
 import path from "path";
 import tmp from "tmp";
-import { Signale } from "signale";
+import { test, expect, beforeEach, afterEach } from "vitest";
 import { prepare } from "./index.js";
-import { test, beforeEach, afterEach } from "@jest/globals";
 const context = {
     stdout: process.stdout,
     stderr: process.stderr,
-    logger: new Signale(),
+    logger: {},
     cwd: "/path/to/your/repository",
     env: process.env,
     envCi: {
@@ -112,8 +111,11 @@ async function assertFileContents(name, expected) {
     expect(actual).toEqual(expected);
 }
 async function assertFileContentsContain(name, expected) {
-    const actual = await fs.readFileSync(path.join(d.name, name), "utf-8");
-    expect(actual).toEqual(expect.stringContaining(expected));
+    const filePath = path.join(d.name, name);
+    const actual = await fs.readFileSync(filePath, "utf-8");
+    if (!actual.includes(expected)) {
+        throw new Error(`File ${filePath} does not contain "${expected}"`);
+    }
 }
 test("should expose prepare", async () => {
     expect(m.prepare).toBeDefined();
@@ -259,7 +261,9 @@ test("prepare accepts multi-argument `to` callback functions for regular express
             files: [path.join(d.name, "/foo.md")],
             from: /npm i (.+)@(.+)`/g,
             to: ((match, packageName, version) => {
-                return match.replace(version, context.nextRelease?.version ?? version).replace(packageName, packageName.split("").reverse().join(""));
+                return match
+                    .replace(version, context.nextRelease?.version ?? version)
+                    .replace(packageName, packageName.split("").reverse().join(""));
             }),
         },
     ];
@@ -305,7 +309,11 @@ test("prepare accepts an array of `from` matchers", async () => {
             // to mean global replacements for improved JSON configuration
             // capabilities. The regular expression and function matchers should only
             // replace a single occurrence and hence only affect the `npm` line
-            from: ["1.0.0", /install with/, (filename) => path.basename(filename, ".md")],
+            from: [
+                "1.0.0",
+                /install with/,
+                (filename) => path.basename(filename, ".md"),
+            ],
             to: "bar",
         },
     ];

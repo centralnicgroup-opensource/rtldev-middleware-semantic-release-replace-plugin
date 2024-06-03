@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.0...v1.0.1) (2024-06-03)
+
+
+### Bug Fixes
+
+* **package.json:** bumped semantic-release to v24.0.0 and added support for teams notify plugin ([63df3ae](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/commit/63df3ae8999e765439a40f848a2f9c84d8477711))
+
 # 1.0.0 (2024-03-27)
 
 
