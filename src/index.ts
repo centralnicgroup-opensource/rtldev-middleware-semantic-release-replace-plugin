@@ -169,7 +169,14 @@ export async function prepare(
 
     delete replacement.results;
 
-    const replaceInFileConfig = replacement as ReplaceInFileConfig;
+    const replaceInFileConfig: ReplaceInFileConfig & {
+      from: From | From[];
+      to: To | To[];
+    } = {
+      ...replacement,
+      from: replacement.from ?? [],
+      to: replacement.to ?? [],
+    };
 
     // The `replace-in-file` package uses `String.replace` under the hood for
     // the actual replacement. If `from` is a string, this means only a
@@ -202,7 +209,11 @@ export async function prepare(
         : applyContextToReplacement(replacement.to, context);
 
     let actual = await (replace as unknown as typeof replaceInFile)(
-      replaceInFileConfig
+      replaceInFileConfig as ReplaceInFileConfig & {
+        from: From | From[];
+        to: To | To[];
+        processor?: never;
+      }
     );
 
     if (results) {
