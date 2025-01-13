@@ -45,7 +45,11 @@ export async function prepare(PluginConfig, context) {
     for (const replacement of PluginConfig.replacements) {
         let { results } = replacement;
         delete replacement.results;
-        const replaceInFileConfig = replacement;
+        const replaceInFileConfig = {
+            ...replacement,
+            from: replacement.from,
+            to: replacement.to,
+        };
         // The `replace-in-file` package uses `String.replace` under the hood for
         // the actual replacement. If `from` is a string, this means only a
         // single occurrence will be replaced. This plugin intents to replace

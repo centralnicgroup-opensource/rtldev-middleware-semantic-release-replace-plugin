@@ -26,9 +26,9 @@
     "release": "semantic-release"
   },
   "overrides": {
-		"cross-spawn": "^7.0.5",
+    "cross-spawn": "^7.0.6",
     "micromatch": ">=4.0.8"
-	},
+  },
   "dependencies": {
     "jest-diff": "^29.6.0",
     "lodash-es": "^4.17.21",
@@ -60,8 +60,7 @@
     "vitest": "^2.1.8"
   },
   "engines": {
-		"node": ">=20.8.1",
-		"npm": ">=10.2.4"
+    "node": ">=20.8.1"
   },
   "publishConfig": {
     "access": "public"
