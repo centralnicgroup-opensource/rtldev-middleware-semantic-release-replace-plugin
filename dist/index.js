@@ -47,8 +47,8 @@ export async function prepare(PluginConfig, context) {
         delete replacement.results;
         const replaceInFileConfig = {
             ...replacement,
-            from: replacement.from,
-            to: replacement.to,
+            from: replacement.from ?? [],
+            to: replacement.to ?? [],
         };
         // The `replace-in-file` package uses `String.replace` under the hood for
         // the actual replacement. If `from` is a string, this means only a
