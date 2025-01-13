@@ -25,6 +25,10 @@
     "test": "tsc --noEmit && vitest --coverage",
     "release": "semantic-release"
   },
+  "overrides": {
+		"cross-spawn": "^7.0.5",
+    "micromatch": ">=4.0.8"
+	},
   "dependencies": {
     "jest-diff": "^29.6.0",
     "lodash-es": "^4.17.21",
@@ -41,7 +45,7 @@
     "@types/tmp": "^0.2.3",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
-    "@vitest/coverage-v8": "^0.33.0",
+    "@vitest/coverage-v8": "^2.1.8",
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -53,10 +57,11 @@
     "typedoc": "^0.24.8",
     "typedoc-plugin-markdown": "^3.15.3",
     "typescript": "^5.1.6",
-    "vitest": "^0.33.0"
+    "vitest": "^2.1.8"
   },
   "engines": {
-    "node": ">=20.6.1"
+		"node": ">=20.8.1",
+		"npm": ">=10.2.4"
   },
   "publishConfig": {
     "access": "public"
