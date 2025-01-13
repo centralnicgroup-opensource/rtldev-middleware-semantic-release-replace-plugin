@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.1...v1.0.2) (2025-01-13)
+
+
+### Bug Fixes
+
+* **package.json:** add overrides for cross-spawn and micromatch dependencies, update vitest and node engine versions ([17307cb](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/commit/17307cb3ebc34eeddcb9549695b0185ffe46fb10))
+
 ## [1.0.1](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.0...v1.0.1) (2024-06-03)
 
 
