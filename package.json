@@ -20,8 +20,8 @@
     "all": "npm run build && npm run docs",
     "build": "tsc",
     "docs": "rm -rf docs && typedoc src/index.ts",
-    "lint": "eslint src/**/*.ts",
-    "format": "npm run lint -- --fix",
+    "lint": "prettier --write . --ignore-path .prettierignore && eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix",
     "test": "tsc --noEmit && vitest --coverage",
     "release": "semantic-release"
   },

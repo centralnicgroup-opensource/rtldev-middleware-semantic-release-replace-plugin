@@ -56,6 +56,7 @@ The following example uses this plugin to demonstrate using semantic-release in 
   ]
 }
 ```
+
 ### Validation
 
 The presence of the `results` array will trigger validation that a replacement has been made. This is optional but recommended.
