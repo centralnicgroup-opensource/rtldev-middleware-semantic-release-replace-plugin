@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.3...v1.0.4) (2025-01-14)
+
+
+### Bug Fixes
+
+* **npm:** remove superfluous overrides section ([a97b3c9](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/commit/a97b3c994f8ba8f9332f33ac24da9262b9f7cd6e))
+
 ## [1.0.3](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.2...v1.0.3) (2025-01-14)
 
 

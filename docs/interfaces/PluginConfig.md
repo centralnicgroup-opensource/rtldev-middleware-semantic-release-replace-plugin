@@ -44,4 +44,4 @@ An array of replacements to be made.
 
 #### Defined in
 
-[index.ts:132](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a97b3c9/src/index.ts#L132)
+[index.ts:132](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/270a314/src/index.ts#L132)
