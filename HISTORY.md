@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.2...v1.0.3) (2025-01-14)
+
+
+### Bug Fixes
+
+* **index.ts:** ensure replacement.from and replacement.to default to empty arrays ([56e7b66](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/commit/56e7b66ce5f38ae66b34d2eea7d0fe73bda71292))
+
 ## [1.0.2](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.1...v1.0.2) (2025-01-13)
 
 

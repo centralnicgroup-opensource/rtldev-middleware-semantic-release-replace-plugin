@@ -28,9 +28,9 @@ with the difference being the single string for `to` and `from`.
 
 #### Defined in
 
-[index.ts:87](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L87)
+[index.ts:87](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L87)
 
----
+___
 
 ### countMatches
 
@@ -38,9 +38,9 @@ with the difference being the single string for `to` and `from`.
 
 #### Defined in
 
-[index.ts:88](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L88)
+[index.ts:88](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L88)
 
----
+___
 
 ### disableGlobs
 
@@ -48,9 +48,9 @@ with the difference being the single string for `to` and `from`.
 
 #### Defined in
 
-[index.ts:89](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L89)
+[index.ts:89](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L89)
 
----
+___
 
 ### dry
 
@@ -58,9 +58,9 @@ with the difference being the single string for `to` and `from`.
 
 #### Defined in
 
-[index.ts:91](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L91)
+[index.ts:91](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L91)
 
----
+___
 
 ### encoding
 
@@ -68,9 +68,9 @@ with the difference being the single string for `to` and `from`.
 
 #### Defined in
 
-[index.ts:90](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L90)
+[index.ts:90](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L90)
 
----
+___
 
 ### files
 
@@ -80,9 +80,9 @@ files to search for replacements
 
 #### Defined in
 
-[index.ts:42](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L42)
+[index.ts:42](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L42)
 
----
+___
 
 ### from
 
@@ -104,9 +104,9 @@ conversion rules as mentioned above.
 
 #### Defined in
 
-[index.ts:58](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L58)
+[index.ts:58](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L58)
 
----
+___
 
 ### ignore
 
@@ -114,22 +114,22 @@ conversion rules as mentioned above.
 
 #### Defined in
 
-[index.ts:86](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L86)
+[index.ts:86](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L86)
 
----
+___
 
 ### results
 
-• `Optional` **results**: \{ `file`: `string` ; `hasChanged`: `boolean` ; `numMatches?`: `number` ; `numReplacements?`: `number` }[]
+• `Optional` **results**: \{ `file`: `string` ; `hasChanged`: `boolean` ; `numMatches?`: `number` ; `numReplacements?`: `number`  }[]
 
 The results array can be passed to ensure that the expected replacements
 have been made, and if not, throw and exception with the diff.
 
 #### Defined in
 
-[index.ts:96](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L96)
+[index.ts:96](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L96)
 
----
+___
 
 ### to
 
@@ -143,7 +143,6 @@ The context object is used to render the template. Additional values
 can be found at: https://semantic-release.gitbook.io/semantic-release/developer-guide/js-api#result
 
 For advanced replacement (NOTE: only for use with `release.config.js` file version), pass in a function to replace non-standard variables
-
 ```
 {
    from: `__VERSION__ = 11`, // eslint-disable-line
@@ -163,4 +162,4 @@ to match the amount of `from` matchers.
 
 #### Defined in
 
-[index.ts:85](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L85)
+[index.ts:85](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L85)

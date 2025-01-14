@@ -28,9 +28,9 @@ semantic-release-replace-plugin
 
 #### Defined in
 
-[index.ts:26](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L26)
+[index.ts:26](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L26)
 
----
+___
 
 ### FromCallback
 
@@ -42,10 +42,10 @@ semantic-release-replace-plugin
 
 ##### Parameters
 
-| Name       | Type        |
-| :--------- | :---------- |
-| `filename` | `string`    |
-| `...args`  | `unknown`[] |
+| Name | Type |
+| :------ | :------ |
+| `filename` | `string` |
+| `...args` | `unknown`[] |
 
 ##### Returns
 
@@ -53,9 +53,9 @@ semantic-release-replace-plugin
 
 #### Defined in
 
-[index.ts:27](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L27)
+[index.ts:27](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L27)
 
----
+___
 
 ### To
 
@@ -63,9 +63,9 @@ semantic-release-replace-plugin
 
 #### Defined in
 
-[index.ts:31](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L31)
+[index.ts:31](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L31)
 
----
+___
 
 ### ToCallback
 
@@ -77,9 +77,9 @@ semantic-release-replace-plugin
 
 ##### Parameters
 
-| Name      | Type        |
-| :-------- | :---------- |
-| `match`   | `string`    |
+| Name | Type |
+| :------ | :------ |
+| `match` | `string` |
 | `...args` | `unknown`[] |
 
 ##### Returns
@@ -88,7 +88,7 @@ semantic-release-replace-plugin
 
 #### Defined in
 
-[index.ts:32](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L32)
+[index.ts:32](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L32)
 
 ## Functions
 
@@ -98,10 +98,10 @@ semantic-release-replace-plugin
 
 #### Parameters
 
-| Name           | Type                                         |
-| :------------- | :------------------------------------------- |
+| Name | Type |
+| :------ | :------ |
 | `PluginConfig` | [`PluginConfig`](interfaces/PluginConfig.md) |
-| `context`      | `VerifyReleaseContext`                       |
+| `context` | `VerifyReleaseContext` |
 
 #### Returns
 
@@ -109,4 +109,4 @@ semantic-release-replace-plugin
 
 #### Defined in
 
-[index.ts:163](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a490964/src/index.ts#L163)
+[index.ts:163](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/56e7b66/src/index.ts#L163)
