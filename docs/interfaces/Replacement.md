@@ -1,92 +1,73 @@
+[**semantic-release-replace-plugin**](../README.md)
+
+***
+
 [semantic-release-replace-plugin](../README.md) / Replacement
 
 # Interface: Replacement
 
+Defined in: [index.ts:19](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L19)
+
 Replacement is similar to the interface used by https://www.npmjs.com/package/replace-in-file
 with the difference being the single string for `to` and `from`.
 
-## Table of contents
-
-### Properties
-
-- [allowEmptyPaths](Replacement.md#allowemptypaths)
-- [countMatches](Replacement.md#countmatches)
-- [disableGlobs](Replacement.md#disableglobs)
-- [dry](Replacement.md#dry)
-- [encoding](Replacement.md#encoding)
-- [files](Replacement.md#files)
-- [from](Replacement.md#from)
-- [ignore](Replacement.md#ignore)
-- [results](Replacement.md#results)
-- [to](Replacement.md#to)
-
 ## Properties
 
-### allowEmptyPaths
+### allowEmptyPaths?
 
-• `Optional` **allowEmptyPaths**: `boolean`
+> `optional` **allowEmptyPaths**: `boolean`
 
-#### Defined in
+Defined in: [index.ts:68](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L68)
 
-[index.ts:87](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/270a314/src/index.ts#L87)
+***
 
-___
+### countMatches?
 
-### countMatches
+> `optional` **countMatches**: `boolean`
 
-• `Optional` **countMatches**: `boolean`
+Defined in: [index.ts:69](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L69)
 
-#### Defined in
+***
 
-[index.ts:88](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/270a314/src/index.ts#L88)
+### disableGlobs?
 
-___
+> `optional` **disableGlobs**: `boolean`
 
-### disableGlobs
+Defined in: [index.ts:70](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L70)
 
-• `Optional` **disableGlobs**: `boolean`
+***
 
-#### Defined in
+### dry?
 
-[index.ts:89](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/270a314/src/index.ts#L89)
+> `optional` **dry**: `boolean`
 
-___
+Defined in: [index.ts:72](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L72)
 
-### dry
+***
 
-• `Optional` **dry**: `boolean`
+### encoding?
 
-#### Defined in
+> `optional` **encoding**: `string`
 
-[index.ts:91](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/270a314/src/index.ts#L91)
+Defined in: [index.ts:71](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L71)
 
-___
-
-### encoding
-
-• `Optional` **encoding**: `string`
-
-#### Defined in
-
-[index.ts:90](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/270a314/src/index.ts#L90)
-
-___
+***
 
 ### files
 
-• **files**: `string`[]
+> **files**: `string`[]
+
+Defined in: [index.ts:23](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L23)
 
 files to search for replacements
 
-#### Defined in
-
-[index.ts:42](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/270a314/src/index.ts#L42)
-
-___
+***
 
 ### from
 
-• **from**: [`From`](../README.md#from) \| [`From`](../README.md#from)[]
+> **from**: [`From`](../type-aliases/From.md) \| [`From`](../type-aliases/From.md)[]
+
+Defined in: [index.ts:39](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L39)
 
 The RegExp pattern to use to match.
 
@@ -102,42 +83,52 @@ functions, etc.
 Multiple matchers may be provided as an array, following the same
 conversion rules as mentioned above.
 
-#### Defined in
+***
 
-[index.ts:58](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/270a314/src/index.ts#L58)
+### ignore?
 
-___
+> `optional` **ignore**: `string`[]
 
-### ignore
+Defined in: [index.ts:67](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L67)
 
-• `Optional` **ignore**: `string`[]
+***
 
-#### Defined in
+### results?
 
-[index.ts:86](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/270a314/src/index.ts#L86)
+> `optional` **results**: `object`[]
 
-___
-
-### results
-
-• `Optional` **results**: \{ `file`: `string` ; `hasChanged`: `boolean` ; `numMatches?`: `number` ; `numReplacements?`: `number`  }[]
+Defined in: [index.ts:77](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L77)
 
 The results array can be passed to ensure that the expected replacements
 have been made, and if not, throw and exception with the diff.
 
-#### Defined in
+#### file
 
-[index.ts:96](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/270a314/src/index.ts#L96)
+> **file**: `string`
 
-___
+#### hasChanged
+
+> **hasChanged**: `boolean`
+
+#### numMatches?
+
+> `optional` **numMatches**: `number`
+
+#### numReplacements?
+
+> `optional` **numReplacements**: `number`
+
+***
 
 ### to
 
-• **to**: [`To`](../README.md#to) \| [`To`](../README.md#to)[]
+> **to**: [`To`](../type-aliases/To.md) \| [`To`](../type-aliases/To.md)[]
+
+Defined in: [index.ts:66](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L66)
 
 The replacement value using a template of variables.
 
-`__VERSION__ = "${nextRelease.version}"`
+`__VERSION__ = "${context.nextRelease.version}"`
 
 The context object is used to render the template. Additional values
 can be found at: https://semantic-release.gitbook.io/semantic-release/developer-guide/js-api#result
@@ -159,7 +150,3 @@ string, etc. See the `String.replace` documentation for details
 Multiple replacements may be specified as an array. These can be either
 strings or callback functions. Note that the amount of replacements needs
 to match the amount of `from` matchers.
-
-#### Defined in
-
-[index.ts:85](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/270a314/src/index.ts#L85)

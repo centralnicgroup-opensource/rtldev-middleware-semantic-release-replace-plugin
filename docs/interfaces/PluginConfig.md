@@ -1,6 +1,12 @@
+[**semantic-release-replace-plugin**](../README.md)
+
+***
+
 [semantic-release-replace-plugin](../README.md) / PluginConfig
 
 # Interface: PluginConfig
+
+Defined in: [index.ts:111](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L111)
 
 PluginConfig is used to provide multiple replacement.
 
@@ -12,7 +18,7 @@ PluginConfig is used to provide multiple replacement.
       {
         "files": ["foo/__init__.py"],
         "from": "__VERSION__ = \".*\"",
-        "to": "__VERSION__ = \"${nextRelease.version}\"",
+        "to": "__VERSION__ = \"${context.nextRelease.version}\"",
         "results": [
           {
             "file": "foo/__init__.py",
@@ -28,20 +34,12 @@ PluginConfig is used to provide multiple replacement.
 ]
 ```
 
-## Table of contents
-
-### Properties
-
-- [replacements](PluginConfig.md#replacements)
-
 ## Properties
 
 ### replacements
 
-• **replacements**: [`Replacement`](Replacement.md)[]
+> **replacements**: [`Replacement`](Replacement.md)[]
+
+Defined in: [index.ts:113](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/3c967f53ff3edf273839579fb756410beeb0ef7d/src/index.ts#L113)
 
 An array of replacements to be made.
-
-#### Defined in
-
-[index.ts:132](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/270a314/src/index.ts#L132)
