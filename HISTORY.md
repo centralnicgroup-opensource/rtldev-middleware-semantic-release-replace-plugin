@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.4...v1.0.5) (2025-02-18)
+
+
+### Bug Fixes
+
+* **deps:** deprecated jest, jest-diff and loadash-es with custom integration, and devDeps bumped to latest version ([55d78c4](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/commit/55d78c403e3bc820d7b4813a0b5b12f13ec371f5))
+
 ## [1.0.4](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.3...v1.0.4) (2025-01-14)
 
 

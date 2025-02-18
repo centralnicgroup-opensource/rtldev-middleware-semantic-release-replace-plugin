@@ -1,12 +1,12 @@
 [**semantic-release-replace-plugin**](../README.md)
 
----
+***
 
 [semantic-release-replace-plugin](../README.md) / Replacement
 
 # Interface: Replacement
 
-Defined in: [index.ts:19](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/72897e5fd6a629573f597e0e200d3cdd145a96b9/src/index.ts#L19)
+Defined in: [index.ts:19](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L19)
 
 Replacement is similar to the interface used by https://www.npmjs.com/package/replace-in-file
 with the difference being the single string for `to` and `from`.
@@ -17,57 +17,57 @@ with the difference being the single string for `to` and `from`.
 
 > `optional` **allowEmptyPaths**: `boolean`
 
-Defined in: [index.ts:68](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/72897e5fd6a629573f597e0e200d3cdd145a96b9/src/index.ts#L68)
+Defined in: [index.ts:68](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L68)
 
----
+***
 
 ### countMatches?
 
 > `optional` **countMatches**: `boolean`
 
-Defined in: [index.ts:69](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/72897e5fd6a629573f597e0e200d3cdd145a96b9/src/index.ts#L69)
+Defined in: [index.ts:69](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L69)
 
----
+***
 
 ### disableGlobs?
 
 > `optional` **disableGlobs**: `boolean`
 
-Defined in: [index.ts:70](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/72897e5fd6a629573f597e0e200d3cdd145a96b9/src/index.ts#L70)
+Defined in: [index.ts:70](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L70)
 
----
+***
 
 ### dry?
 
 > `optional` **dry**: `boolean`
 
-Defined in: [index.ts:72](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/72897e5fd6a629573f597e0e200d3cdd145a96b9/src/index.ts#L72)
+Defined in: [index.ts:72](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L72)
 
----
+***
 
 ### encoding?
 
 > `optional` **encoding**: `string`
 
-Defined in: [index.ts:71](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/72897e5fd6a629573f597e0e200d3cdd145a96b9/src/index.ts#L71)
+Defined in: [index.ts:71](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L71)
 
----
+***
 
 ### files
 
 > **files**: `string`[]
 
-Defined in: [index.ts:23](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/72897e5fd6a629573f597e0e200d3cdd145a96b9/src/index.ts#L23)
+Defined in: [index.ts:23](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L23)
 
 files to search for replacements
 
----
+***
 
 ### from
 
 > **from**: [`From`](../type-aliases/From.md) \| [`From`](../type-aliases/From.md)[]
 
-Defined in: [index.ts:39](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/72897e5fd6a629573f597e0e200d3cdd145a96b9/src/index.ts#L39)
+Defined in: [index.ts:39](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L39)
 
 The RegExp pattern to use to match.
 
@@ -83,21 +83,21 @@ functions, etc.
 Multiple matchers may be provided as an array, following the same
 conversion rules as mentioned above.
 
----
+***
 
 ### ignore?
 
 > `optional` **ignore**: `string`[]
 
-Defined in: [index.ts:67](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/72897e5fd6a629573f597e0e200d3cdd145a96b9/src/index.ts#L67)
+Defined in: [index.ts:67](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L67)
 
----
+***
 
 ### results?
 
 > `optional` **results**: `object`[]
 
-Defined in: [index.ts:77](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/72897e5fd6a629573f597e0e200d3cdd145a96b9/src/index.ts#L77)
+Defined in: [index.ts:77](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L77)
 
 The results array can be passed to ensure that the expected replacements
 have been made, and if not, throw and exception with the diff.
@@ -118,13 +118,13 @@ have been made, and if not, throw and exception with the diff.
 
 > `optional` **numReplacements**: `number`
 
----
+***
 
 ### to
 
 > **to**: [`To`](../type-aliases/To.md) \| [`To`](../type-aliases/To.md)[]
 
-Defined in: [index.ts:66](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/72897e5fd6a629573f597e0e200d3cdd145a96b9/src/index.ts#L66)
+Defined in: [index.ts:66](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L66)
 
 The replacement value using a template of variables.
 
@@ -134,7 +134,6 @@ The context object is used to render the template. Additional values
 can be found at: https://semantic-release.gitbook.io/semantic-release/developer-guide/js-api#result
 
 For advanced replacement (NOTE: only for use with `release.config.js` file version), pass in a function to replace non-standard variables
-
 ```
 {
    from: `__VERSION__ = 11`, // eslint-disable-line

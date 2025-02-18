@@ -1,6 +1,6 @@
 [**semantic-release-replace-plugin**](../README.md)
 
----
+***
 
 [semantic-release-replace-plugin](../README.md) / To
 
@@ -8,4 +8,4 @@
 
 > **To**: `string` \| [`ToCallback`](ToCallback.md)
 
-Defined in: [index.ts:12](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/72897e5fd6a629573f597e0e200d3cdd145a96b9/src/index.ts#L12)
+Defined in: [index.ts:12](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L12)
