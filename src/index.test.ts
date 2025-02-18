@@ -110,7 +110,7 @@ afterEach(() => {
 
 async function assertFileContents(
   name: string,
-  expected: string
+  expected: string,
 ): Promise<void> {
   const actual = await fs.readFileSync(path.join(d.name, name), "utf-8");
   expect(actual).toEqual(expected);
@@ -118,7 +118,7 @@ async function assertFileContents(
 
 async function assertFileContentsContain(
   name: string,
-  expected: string
+  expected: string,
 ): Promise<void> {
   const filePath = path.join(d.name, name);
   const actual = await fs.readFileSync(filePath, "utf-8");
@@ -149,11 +149,11 @@ test("prepare should replace using regex", async () => {
 
   await assertFileContentsContain(
     "__init__.py",
-    `__VERSION__ = "${context.nextRelease?.version}"`
+    `__VERSION__ = "${context.nextRelease?.version}"`,
   );
   await assertFileContents(
     "build.gradle",
-    `version = '${context.nextRelease?.version}'`
+    `version = '${context.nextRelease?.version}'`,
   );
 });
 
@@ -179,7 +179,7 @@ test("prepare should use result check", async () => {
 
   await assertFileContentsContain(
     "__init__.py",
-    `__VERSION__ = "${context.nextRelease?.version}"`
+    `__VERSION__ = "${context.nextRelease?.version}"`,
   );
 });
 
@@ -218,7 +218,7 @@ test("prepare should use result check", async () => {
 
   await assertFileContentsContain(
     "__init__.py",
-    `__VERSION__ = "${context.nextRelease?.version}"`
+    `__VERSION__ = "${context.nextRelease?.version}"`,
   );
 });
 
@@ -355,7 +355,7 @@ test("prepare passes the `context` as the final function argument to `to` callba
 
   await assertFileContentsContain(
     "foo.md",
-    `npm i oof@${context.nextRelease?.version}`
+    `npm i oof@${context.nextRelease?.version}`,
   );
   await assertFileContentsContain("foo.md", "yarn add foo@1.0.0");
 });
@@ -405,10 +405,10 @@ test("prepare accepts an array of `to` replacements", async () => {
 
   await assertFileContentsContain(
     "foo.md",
-    `npm install foo@${context.nextRelease?.version}`
+    `npm install foo@${context.nextRelease?.version}`,
   );
   await assertFileContentsContain(
     "foo.md",
-    `yarn add foo@${context.nextRelease?.version}`
+    `yarn add foo@${context.nextRelease?.version}`,
   );
 });

@@ -1,6 +1,6 @@
 **semantic-release-replace-plugin**
 
-***
+---
 
 # semantic-release-replace-plugin
 

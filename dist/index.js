@@ -3,9 +3,7 @@ import { replaceInFile } from "replace-in-file";
  * Wraps the `callback` in a new function that passes the `context` as the
  * final argument to the `callback` when it gets called.
  */
-// eslint-disable-next-line @typescript-eslint/ban-types
 function applyContextToCallback(callback, context) {
-    // eslint-disable-next-line prefer-spread
     return (...args) => callback.apply(null, args.concat(context));
 }
 /**
@@ -123,7 +121,10 @@ function deepEqual(a, b) {
  */
 function deepDiff(obj1, obj2, path = "") {
     let differences = [];
-    if (typeof obj1 !== "object" || typeof obj2 !== "object" || obj1 === null || obj2 === null) {
+    if (typeof obj1 !== "object" ||
+        typeof obj2 !== "object" ||
+        obj1 === null ||
+        obj2 === null) {
         if (obj1 !== obj2) {
             differences.push(`Difference at ${path}: ${obj1} !== ${obj2}`);
         }

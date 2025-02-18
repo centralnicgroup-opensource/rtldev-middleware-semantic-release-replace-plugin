@@ -117,9 +117,10 @@ export interface PluginConfig {
  * Wraps the `callback` in a new function that passes the `context` as the
  * final argument to the `callback` when it gets called.
  */
-// eslint-disable-next-line @typescript-eslint/ban-types
-function applyContextToCallback(callback: Function, context: Context) {
-  // eslint-disable-next-line prefer-spread
+function applyContextToCallback(
+  callback: (...args: unknown[]) => unknown,
+  context: Context,
+) {
   return (...args: unknown[]) => callback.apply(null, args.concat(context));
 }
 
@@ -131,7 +132,7 @@ function applyContextToReplacement(to: To, context: Context): To {
   return typeof to === "function"
     ? applyContextToCallback(to, context)
     : new Function(...Object.keys(context), `return \`${to}\`;`)(
-        ...Object.values(context)
+        ...Object.values(context),
       );
 }
 
@@ -145,27 +146,27 @@ function normalizeToArray<T>(value: T | T[]): T[] {
 
 /**
  * Compares two values for deep equality.
- * 
+ *
  * This function handles complex data types such as `RegExp`, `Date`, `Map`, `Set`,
  * and performs deep comparison of nested objects and arrays.
- * 
+ *
  * @param {any} a - The first value to compare.
  * @param {any} b - The second value to compare.
  * @returns {boolean} `true` if the values are deeply equal, `false` otherwise.
- * 
+ *
  * @example
  * const obj1 = { regex: /abc/g, date: new Date(), set: new Set([1, 2, 3]) };
  * const obj2 = { regex: /abc/g, date: new Date(), set: new Set([1, 2, 3]) };
- * 
+ *
  * console.log(deepEqual(obj1, obj2)); // true
- * 
+ *
  * @example
  * const obj1 = { regex: /abc/g, date: new Date(2022, 0, 1) };
  * const obj2 = { regex: /abc/g, date: new Date(2021, 0, 1) };
- * 
+ *
  * console.log(deepEqual(obj1, obj2)); // false
  */
-function deepEqual(a: any, b: any): boolean {
+function deepEqual(a: unknown, b: unknown): boolean {
   if (a === b) return true; // Handle primitives
 
   // Check for null or undefined
@@ -218,34 +219,39 @@ function deepEqual(a: any, b: any): boolean {
 
 /**
  * Recursively compares two objects and returns an array of differences.
- * 
+ *
  * The function traverses the two objects (or arrays) and identifies differences
  * in their properties or elements. It supports complex types like `Date`, `RegExp`,
  * `Map`, `Set`, and checks nested objects and arrays.
- * 
+ *
  * @param {any} obj1 - The first value to compare.
  * @param {any} obj2 - The second value to compare.
  * @param {string} [path=""] - The current path to the property or element being compared (used for recursion).
  * @returns {string[]} An array of strings representing the differences between the two values.
- * 
+ *
  * @example
  * const obj1 = { a: 1, b: { c: 2 } };
  * const obj2 = { a: 1, b: { c: 3 } };
- * 
+ *
  * const differences = deepDiff(obj1, obj2);
  * console.log(differences); // ['Difference at b.c: 2 !== 3']
- * 
+ *
  * @example
  * const set1 = new Set([1, 2, 3]);
  * const set2 = new Set([1, 2, 4]);
- * 
+ *
  * const differences = deepDiff(set1, set2);
  * console.log(differences); // ['Difference at : Set { 1, 2, 3 } !== Set { 1, 2, 4 }']
  */
-function deepDiff(obj1: any, obj2: any, path = ""): string[] {
+function deepDiff(obj1: unknown, obj2: unknown, path = ""): string[] {
   let differences: string[] = [];
 
-  if (typeof obj1 !== "object" || typeof obj2 !== "object" || obj1 === null || obj2 === null) {
+  if (
+    typeof obj1 !== "object" ||
+    typeof obj2 !== "object" ||
+    obj1 === null ||
+    obj2 === null
+  ) {
     if (obj1 !== obj2) {
       differences.push(`Difference at ${path}: ${obj1} !== ${obj2}`);
     }
@@ -259,7 +265,9 @@ function deepDiff(obj1: any, obj2: any, path = ""): string[] {
     }
     for (let [key, value] of obj1) {
       if (!obj2.has(key) || !deepEqual(value, obj2.get(key))) {
-        differences.push(`Difference at ${path}.${key}: ${value} !== ${obj2.get(key)}`);
+        differences.push(
+          `Difference at ${path}.${key}: ${value} !== ${obj2.get(key)}`,
+        );
       }
     }
     return differences;
@@ -305,7 +313,7 @@ function deepDiff(obj1: any, obj2: any, path = ""): string[] {
 
 export async function prepare(
   PluginConfig: PluginConfig,
-  context: Context
+  context: Context,
 ): Promise<void> {
   for (const replacement of PluginConfig.replacements) {
     let { results } = replacement;
@@ -331,7 +339,7 @@ export async function prepare(
           default:
             return from;
         }
-      }
+      },
     );
 
     replaceInFileConfig.to =
@@ -344,7 +352,7 @@ export async function prepare(
         from: From | From[];
         to: To | To[];
         processor?: never;
-      }
+      },
     );
 
     if (results) {
