@@ -8,7 +8,7 @@
 
 > **prepare**(`PluginConfig`, `context`): `Promise`\<`void`\>
 
-Defined in: [index.ts:314](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L314)
+Defined in: [index.ts:314](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L314)
 
 ## Parameters
 

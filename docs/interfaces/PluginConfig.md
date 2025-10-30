@@ -6,7 +6,7 @@
 
 # Interface: PluginConfig
 
-Defined in: [index.ts:111](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L111)
+Defined in: [index.ts:111](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L111)
 
 PluginConfig is used to provide multiple replacement.
 
@@ -40,6 +40,6 @@ PluginConfig is used to provide multiple replacement.
 
 > **replacements**: [`Replacement`](Replacement.md)[]
 
-Defined in: [index.ts:113](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/1cd9b4e3f4e3e5f58ecf23af95ef0b989d354aee/src/index.ts#L113)
+Defined in: [index.ts:113](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L113)
 
 An array of replacements to be made.

@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.5...v1.0.6) (2025-10-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies and node engine version ([bf2002c](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/commit/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2))
+
 ## [1.0.5](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.4...v1.0.5) (2025-02-18)
 
 
