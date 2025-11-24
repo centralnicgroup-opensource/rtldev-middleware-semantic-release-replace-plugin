@@ -17,7 +17,7 @@
     "README.md"
   ],
   "scripts": {
-    "all": "npm run build && npm run docs",
+    "all": "pnpm run build && pnpm run docs",
     "build": "tsc",
     "docs": "rm -rf docs && typedoc src/index.ts",
     "lint": "prettier --write . --ignore-path .prettierignore && eslint",

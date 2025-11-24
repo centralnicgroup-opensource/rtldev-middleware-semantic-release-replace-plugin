@@ -1,5 +1,7 @@
 # Dependency directory
 node_modules
+.pnpm-store
+package-lock.json
 lib/
 dist/
 

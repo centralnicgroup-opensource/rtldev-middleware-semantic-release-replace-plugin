@@ -41,17 +41,23 @@ accept your pull requests.
 
 1.  [Prepare your environment for Node.js setup][setup].
 
-1.  Install dependencies:
+2. Install PNPM:
 
-        npm install
+        `npm i -g pnpm@latest`
 
-1.  Run the tests:
+3.  Install dependencies:
 
-        npm test
+        `pnpm install`
 
-1.  Lint (and maybe fix) any changes:
+4.  Run the tests:
 
-        npm run lint
-        npm run format
+        `pnpm test`
+
+5.  Lint (and maybe fix) any changes:
+
+        ```
+        pnpm run lint
+        pnpm run format
+        ```
 
 [setup]: https://cloud.google.com/nodejs/docs/setup
