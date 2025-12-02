@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.6...v1.0.7) (2025-12-02)
+
+
+### Bug Fixes
+
+* **logging:** add logging for file search patterns and replacement results in prepare function ([a6d9688](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/commit/a6d96886d7590a3f455f458aaf93dfbc75f80517))
+
 ## [1.0.6](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.5...v1.0.6) (2025-10-30)
 
 

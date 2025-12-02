@@ -6,7 +6,7 @@
 
 # Interface: Replacement
 
-Defined in: [index.ts:19](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L19)
+Defined in: [index.ts:19](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a6d96886d7590a3f455f458aaf93dfbc75f80517/src/index.ts#L19)
 
 Replacement is similar to the interface used by https://www.npmjs.com/package/replace-in-file
 with the difference being the single string for `to` and `from`.
@@ -17,7 +17,7 @@ with the difference being the single string for `to` and `from`.
 
 > `optional` **allowEmptyPaths**: `boolean`
 
-Defined in: [index.ts:68](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L68)
+Defined in: [index.ts:68](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a6d96886d7590a3f455f458aaf93dfbc75f80517/src/index.ts#L68)
 
 ***
 
@@ -25,7 +25,7 @@ Defined in: [index.ts:68](https://github.com/centralnicgroup-opensource/rtldev-m
 
 > `optional` **countMatches**: `boolean`
 
-Defined in: [index.ts:69](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L69)
+Defined in: [index.ts:69](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a6d96886d7590a3f455f458aaf93dfbc75f80517/src/index.ts#L69)
 
 ***
 
@@ -33,7 +33,7 @@ Defined in: [index.ts:69](https://github.com/centralnicgroup-opensource/rtldev-m
 
 > `optional` **disableGlobs**: `boolean`
 
-Defined in: [index.ts:70](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L70)
+Defined in: [index.ts:70](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a6d96886d7590a3f455f458aaf93dfbc75f80517/src/index.ts#L70)
 
 ***
 
@@ -41,7 +41,7 @@ Defined in: [index.ts:70](https://github.com/centralnicgroup-opensource/rtldev-m
 
 > `optional` **dry**: `boolean`
 
-Defined in: [index.ts:72](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L72)
+Defined in: [index.ts:72](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a6d96886d7590a3f455f458aaf93dfbc75f80517/src/index.ts#L72)
 
 ***
 
@@ -49,7 +49,7 @@ Defined in: [index.ts:72](https://github.com/centralnicgroup-opensource/rtldev-m
 
 > `optional` **encoding**: `string`
 
-Defined in: [index.ts:71](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L71)
+Defined in: [index.ts:71](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a6d96886d7590a3f455f458aaf93dfbc75f80517/src/index.ts#L71)
 
 ***
 
@@ -57,7 +57,7 @@ Defined in: [index.ts:71](https://github.com/centralnicgroup-opensource/rtldev-m
 
 > **files**: `string`[]
 
-Defined in: [index.ts:23](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L23)
+Defined in: [index.ts:23](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a6d96886d7590a3f455f458aaf93dfbc75f80517/src/index.ts#L23)
 
 files to search for replacements
 
@@ -67,7 +67,7 @@ files to search for replacements
 
 > **from**: [`From`](../type-aliases/From.md) \| [`From`](../type-aliases/From.md)[]
 
-Defined in: [index.ts:39](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L39)
+Defined in: [index.ts:39](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a6d96886d7590a3f455f458aaf93dfbc75f80517/src/index.ts#L39)
 
 The RegExp pattern to use to match.
 
@@ -89,7 +89,7 @@ conversion rules as mentioned above.
 
 > `optional` **ignore**: `string`[]
 
-Defined in: [index.ts:67](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L67)
+Defined in: [index.ts:67](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a6d96886d7590a3f455f458aaf93dfbc75f80517/src/index.ts#L67)
 
 ***
 
@@ -97,7 +97,7 @@ Defined in: [index.ts:67](https://github.com/centralnicgroup-opensource/rtldev-m
 
 > `optional` **results**: `object`[]
 
-Defined in: [index.ts:77](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L77)
+Defined in: [index.ts:77](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a6d96886d7590a3f455f458aaf93dfbc75f80517/src/index.ts#L77)
 
 The results array can be passed to ensure that the expected replacements
 have been made, and if not, throw and exception with the diff.
@@ -124,7 +124,7 @@ have been made, and if not, throw and exception with the diff.
 
 > **to**: [`To`](../type-aliases/To.md) \| [`To`](../type-aliases/To.md)[]
 
-Defined in: [index.ts:66](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/bf2002c6e8e79110f88c009ee5c1e8d96f20a0b2/src/index.ts#L66)
+Defined in: [index.ts:66](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/blob/a6d96886d7590a3f455f458aaf93dfbc75f80517/src/index.ts#L66)
 
 The replacement value using a template of variables.
 
