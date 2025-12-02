@@ -320,6 +320,11 @@ export async function prepare(
 
     delete replacement.results;
 
+    // Log file patterns being searched
+    context.logger?.log?.(
+      `🔍 Searching for files matching: ${JSON.stringify(replacement.files)}`,
+    );
+
     const replaceInFileConfig: ReplaceInFileConfig & {
       from: From | From[];
       to: To | To[];
@@ -355,13 +360,43 @@ export async function prepare(
       },
     );
 
+    // Log results of replacement
+    if (actual && actual.length > 0) {
+      context.logger?.log?.(
+        `✅ Files processed: ${actual.length} file(s) matched and updated`,
+      );
+      actual.forEach((file) => {
+        context.logger?.log?.(
+          `   📄 ${file.file}: ${file.numReplacements ?? 0} replacement(s) made (${file.numMatches ?? 0} match(es))`,
+        );
+      });
+    } else {
+      context.logger?.warn?.(
+        `⚠️  No files found matching pattern: ${JSON.stringify(replacement.files)}`,
+      );
+    }
+
     if (results) {
       results = results.sort();
       actual = actual.sort();
 
       if (!deepEqual([...actual].sort(), [...results].sort())) {
         const difference = deepDiff(actual, results);
-        throw new Error(`Expected match not found!\n${difference.join("\n")}`);
+        const errorMsg = [
+          "❌ Replacement validation failed!",
+          "",
+          "Expected results did not match actual results.",
+          "",
+          "Possible causes:",
+          "  • File glob pattern didn't match expected files",
+          "  • Regex pattern didn't find expected matches",
+          "  • Check for proper escaping in JSON (use \\\\ for backslash)",
+          "  • Verify numMatches and numReplacements expectations",
+          "",
+          "Details:",
+          ...difference.map(d => `  ${d}`),
+        ].join("\n");
+        throw new Error(errorMsg);
       }
     }
   }

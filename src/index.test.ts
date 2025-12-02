@@ -412,3 +412,30 @@ test("prepare accepts an array of `to` replacements", async () => {
     `yarn add foo@${context.nextRelease?.version}`,
   );
 });
+
+test("should update whmcs.json version using regex with countMatches and validate fixture integrity", async () => {
+  const replacements = [
+    {
+      files: [path.join(d.name, "/modules/addons/cnicdnsmanager/whmcs.json")],
+      from: '"version": "\\d+\\.\\d+\\.\\d+"',
+      to: `"version": "${context.nextRelease?.version}"`,
+      countMatches: true,
+      results: [
+        {
+          file: path.join(d.name, "/modules/addons/cnicdnsmanager/whmcs.json"),
+          hasChanged: true,
+          numMatches: 1,
+          numReplacements: 1,
+        },
+      ],
+    },
+  ];
+
+  await prepare({ replacements }, context);
+
+  // Verify temp file was updated correctly
+  await assertFileContentsContain(
+    "modules/addons/cnicdnsmanager/whmcs.json",
+    `"version": "${context.nextRelease?.version}"`,
+  );
+});

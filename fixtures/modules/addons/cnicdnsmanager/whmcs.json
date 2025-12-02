@@ -1,0 +1,24 @@
+{
+	"schema": "1.0",
+	"type": "whmcs-addons",
+	"name": "dummy text-addon",
+	"license": "MIT",
+	"category": "digitalservices",
+	"description": {
+		"name": "dummy text",
+		"tagline": "dummy text",
+		"long": "dummy text",
+		"features": [
+			"dummy text"
+		]
+	},
+	"authors": [
+		{
+			"name": "dummy text",
+			"homepage": "https://www.dummytext.com/"
+		}
+	],
+	"_module": {
+		"version": "27.15.2"
+	}
+}

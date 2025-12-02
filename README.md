@@ -21,6 +21,8 @@ $ npm install https://github.com/centralnicgroup-opensource/semantic-release-rep
 
 The following example uses this plugin to demonstrate using semantic-release in a Python package where `__VERSION__` is defined in the root `__init__.py` file.
 
+### Configuration Example
+
 ```json
 {
   "plugins": [
@@ -30,10 +32,10 @@ The following example uses this plugin to demonstrate using semantic-release in 
       {
         "replacements": [
           {
-            "files": ["foo/**.py"],
+            "files": ["foo/**/*.py"],
             "from": "__VERSION__ = \".*\"",
             "to": "__VERSION__ = \"${nextRelease.version}\"",
-            "ignore" ["foo/go.py"],
+            "ignore": ["foo/go.py"],
             "results": [
               {
                 "file": "foo/__init__.py",
@@ -50,9 +52,67 @@ The following example uses this plugin to demonstrate using semantic-release in 
     [
       "@semantic-release/git",
       {
-        "assets": ["foo/*.py"]
+        "assets": ["foo/**/*.py"]
       }
     ]
+  ]
+}
+```
+
+### Real-world Examples
+
+#### JSON Version (like whmcs.json)
+```json
+{
+  "replacements": [
+    {
+      "files": ["./modules/addons/cnicdnsmanager/whmcs.json"],
+      "from": "\"version\": \"\\d+\\.\\d+\\.\\d+\"",
+      "to": "\"version\": \"${nextRelease.version}\"",
+      "countMatches": true
+    }
+  ]
+}
+```
+
+#### Gradle Build File
+```json
+{
+  "replacements": [
+    {
+      "files": ["./build.gradle"],
+      "from": "version = '[^']+'",
+      "to": "version = '${nextRelease.version}'",
+      "countMatches": true
+    }
+  ]
+}
+```
+
+#### Multiple Files with Results Validation
+```json
+{
+  "replacements": [
+    {
+      "files": ["./release.json", "./COPYRIGHTS"],
+      "from": "(19|20)\\d{2}[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12]\\d|3[01])",
+      "to": "${(new Date()).toISOString().split('T')[0]}",
+      "countMatches": true,
+      "results": [
+        {
+          "file": "./release.json",
+          "hasChanged": true,
+          "numMatches": 1,
+          "numReplacements": 1
+        },
+        {
+          "file": "./COPYRIGHTS",
+          "hasChanged": true,
+          "numMatches": 1,
+          "numReplacements": 1
+        }
+      ]
+    }
   ]
 }
 ```
@@ -73,6 +133,44 @@ This plugin will not commit changes unless you specify assets for the @semantic-
   }
 ]
 ```
+
+## Troubleshooting
+
+### Common Issues
+
+#### Pattern Not Matching
+**Problem:** "No files found matching pattern"
+
+**Solutions:**
+- Verify glob pattern is correct (use `foo/**/*.py` not `foo/**.py`)
+- Check file paths relative to project root
+- Use `countMatches: true` to get detailed feedback
+- Test your regex pattern at [regex101.com](https://regex101.com/)
+
+#### JSON Escaping Issues
+**Problem:** Regex pattern not matching (common in `.releaserc.json`)
+
+**Remember:** In JSON, backslashes must be escaped with another backslash:
+- ❌ Wrong: `"from": "\d+\.\d+"`
+- ✅ Correct: `"from": "\\d+\\.\\d+"`
+
+**Rule:** Double every backslash in JSON strings
+
+#### Results Validation Failed
+**Problem:** "Expected match not found"
+
+**Check:**
+1. Does the file actually exist?
+2. Is the glob pattern matching the right file?
+3. Do the `numMatches` and `numReplacements` match actual replacements?
+4. Is `countMatches: true` enabled?
+
+### Debugging Tips
+
+1. **Enable verbose logging**: The plugin logs all matched files and replacements
+2. **Start simple**: Test with a single replacement first
+3. **Use `results` validation**: It forces you to be explicit about expectations
+4. **Test regex patterns separately**: Use online tools before adding to config
 
 ## Options
 
