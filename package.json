@@ -23,6 +23,10 @@
     "lint": "prettier --write . --ignore-path .prettierignore && eslint",
     "format": "eslint --fix",
     "test": "tsc --noEmit && vitest --coverage",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage --run",
+    "ci": "pnpm run build && pnpm run test && pnpm run lint",
+    "prepublishOnly": "pnpm run build && pnpm run test",
     "release": "semantic-release"
   },
   "dependencies": {
