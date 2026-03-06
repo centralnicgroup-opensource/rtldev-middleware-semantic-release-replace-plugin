@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.8...v1.0.9) (2026-03-06)
+
+
+### Bug Fixes
+
+* **deps:** remove esbuild override from package.json ([5d5ae72](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/commit/5d5ae72b4fd608e9958e6c93c64905d5db8dbc55))
+
 ## [1.0.8](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.7...v1.0.8) (2026-03-06)
 
 
