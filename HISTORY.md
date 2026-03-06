@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.7...v1.0.8) (2026-03-06)
+
+
+### Bug Fixes
+
+* **deps:** bump replace-in-file to 8.4.0 and semantic-release to 25.0.3 ([831a570](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/commit/831a570e698d6991420256f291f3065bea0aae14))
+
 ## [1.0.7](https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-replace-plugin/compare/v1.0.6...v1.0.7) (2025-12-02)
 
 
