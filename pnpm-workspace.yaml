@@ -1,2 +1,5 @@
 onlyBuiltDependencies:
   - esbuild
+
+overrides:
+  undici: ">=7.24.0"
