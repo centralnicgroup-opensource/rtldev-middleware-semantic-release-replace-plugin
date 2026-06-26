@@ -46,7 +46,7 @@
     "eslint-plugin-prettier": "^5.5.6",
     "fs-extra": "^11.3.5",
     "prettier": "^3.8.4",
-    "semantic-release-teams-notify-plugin": "github:centralnicgroup-opensource/rtldev-middleware-semantic-release-notify-plugin#v1.0.6",
+    "@team-internet/semantic-release-plugins": "^1.0.6",
     "tmp": "^0.2.7",
     "typedoc": "^0.28.19",
     "typedoc-plugin-markdown": "^4.12.0",

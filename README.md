@@ -1,5 +1,17 @@
 # Automated Semantic Release Plugin for Version Number Replacement and Date Management
 
+## Deprecated
+
+This package has been deprecated in favor of the consolidated CentralNic semantic-release plugin package:
+
+https://github.com/centralnicgroup-opensource/rtldev-middleware-semantic-release-plugins
+
+```sh
+pnpm add -D @team-internet/semantic-release-plugins
+```
+
+Use `@team-internet/semantic-release-plugins/replace` in semantic-release configuration instead of `semantic-release-replace-plugin`.
+
 [![npm](https://img.shields.io/npm/v/semantic-release-replace-plugin)](https://www.npmjs.com/package/semantic-release-replace-plugin)
 ![Build](https://github.com/jpoehnelt/semantic-release-replace-plugin/workflows/Build/badge.svg)
 ![Release](https://github.com/jpoehnelt/semantic-release-replace-plugin/workflows/Release/badge.svg)
